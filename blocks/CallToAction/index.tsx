@@ -129,32 +129,32 @@ export const Component: React.FC<Type> = (props) => {
           className={classes.content}
         />
         {buttons && (
-        <ul className={classes.buttons}>
-          {buttons.map((button, i) => (
-            <li key={i}>
-              {button.type === 'page' && (
-                <Link
-                  href="[...slug]"
-                  as={`/${button.page.slug}`}
-                >
-                  <a className={classes.button}>
+          <ul className={classes.buttons}>
+            {buttons.map((button, i) => (
+              <li key={i}>
+                {button.type === 'page' && (
+                  <Link
+                    href="[...slug]"
+                    as={`/${button.page.slug}`}
+                  >
+                    <a className={classes.button}>
+                      {button.label}
+                    </a>
+                  </Link>
+                )}
+                {button.type === 'custom' && (
+                  <a
+                    className={classes.button}
+                    href={button.url}
+                    target={button.newTab ? '_blank' : undefined}
+                    rel="noopener noreferrer"
+                  >
                     {button.label}
                   </a>
-                </Link>
-              )}
-              {button.type === 'custom' && (
-                <a
-                  className={classes.button}
-                  href={button.url}
-                  target={button.newTab ? '_blank' : undefined}
-                  rel="noopener noreferrer"
-                >
-                  {button.label}
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
+                )}
+              </li>
+            ))}
+          </ul>
         )}
       </div>
     </div>

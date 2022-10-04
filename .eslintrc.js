@@ -35,6 +35,8 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    indent: 'off',
+    '@typescript-eslint/indent': [2, 2],
   },
   overrides: [
     {

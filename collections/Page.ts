@@ -1,16 +1,15 @@
 import { CollectionConfig } from 'payload/types';
-import { MediaType } from './Media';
 import formatSlug from '../utilities/formatSlug';
 import { Image, Type as ImageType } from '../blocks/Image';
 import { CallToAction, Type as CallToActionType } from '../blocks/CallToAction';
 import { Content, Type as ContentType } from '../blocks/Content';
+import { HomeBanner, Type as HomeBannerType } from '../blocks/HomeBanner';
 
-export type Layout = CallToActionType | ContentType | ImageType
+export type Layout = CallToActionType | ContentType | ImageType | HomeBannerType
 
 export type Type = {
   title: string
   slug: string
-  image?: MediaType
   layout: Layout[]
   meta: {
     title?: string
@@ -33,12 +32,9 @@ export const Page: CollectionConfig = {
       label: 'Page Title',
       type: 'text',
       required: true,
-    },
-    {
-      name: 'image',
-      label: 'Featured Image',
-      type: 'upload',
-      relationTo: 'media',
+      admin: {
+        position: 'sidebar',
+      },
     },
     {
       name: 'layout',
@@ -49,6 +45,7 @@ export const Page: CollectionConfig = {
         CallToAction,
         Content,
         Image,
+        HomeBanner,
       ],
     },
     {

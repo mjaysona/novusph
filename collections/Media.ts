@@ -6,6 +6,11 @@ export type MediaType = {
   height: number
   alt: string
   sizes: {
+    thumbnail?: {
+      filename: string
+      width: number
+      height: number
+    }
     card?: {
       filename: string
       width: number
@@ -21,12 +26,20 @@ export type MediaType = {
 
 const Media: CollectionConfig = {
   slug: 'media',
+  admin: {
+    useAsTitle: 'name',
+  },
   access: {
     read: (): boolean => true, // Everyone can read Media
   },
   upload: {
     adminThumbnail: 'card',
     imageSizes: [
+      {
+        name: 'thumbnail',
+        width: 400,
+        height: 300,
+      },
       {
         name: 'card',
         width: 640,
@@ -44,7 +57,6 @@ const Media: CollectionConfig = {
       name: 'alt',
       label: 'Alt Text',
       type: 'text',
-      required: true,
     },
   ],
 };
