@@ -16,6 +16,7 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
+      typescript: {},
     },
   },
   rules: {
@@ -23,6 +24,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
     'react/no-unused-prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
     'no-underscore-dangle': 'off',
     'import/extensions': [
@@ -37,6 +39,15 @@ module.exports = {
     ],
     indent: 'off',
     '@typescript-eslint/indent': [2, 2],
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        line: {
+          markers: ['/'],
+        },
+      },
+    ],
   },
   overrides: [
     {

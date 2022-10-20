@@ -2,6 +2,17 @@ import { Field } from 'payload/types';
 
 type Data = Record<string, unknown>;
 
+export type Link = {
+  label: string,
+  type: {
+    label: string,
+    value: string,
+  },
+  page?: string,
+  url?: string,
+  newTab: boolean,
+}
+
 const customURLCondition = (_: Data, siblings: Data): boolean => (
   siblings.type === 'custom'
 );
@@ -15,7 +26,7 @@ const link: Field = {
       fields: [
         {
           name: 'label',
-          label: 'Button Label',
+          label: 'Label',
           type: 'text',
           required: true,
           admin: {
@@ -24,17 +35,17 @@ const link: Field = {
         },
         {
           name: 'type',
-          label: 'Button Type',
+          label: 'Type',
           required: true,
           type: 'radio',
           defaultValue: 'page',
           options: [
             {
-              label: 'Page',
+              label: 'Link to a page',
               value: 'page',
             },
             {
-              label: 'Custom URL',
+              label: 'Link to a different website',
               value: 'custom',
             },
           ],
@@ -59,7 +70,7 @@ const link: Field = {
     },
     {
       name: 'url',
-      label: 'Button URL',
+      label: 'Website link',
       type: 'text',
       required: true,
       admin: {

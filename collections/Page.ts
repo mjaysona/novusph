@@ -3,6 +3,7 @@ import formatSlug from '../utilities/formatSlug';
 import { Image, Type as ImageType } from '../blocks/Image';
 import { CallToAction, Type as CallToActionType } from '../blocks/CallToAction';
 import { Content, Type as ContentType } from '../blocks/Content';
+import { ContentWithListBadges } from '../blocks/ContentWithListBadges';
 import { HomeBanner, Type as HomeBannerType } from '../blocks/HomeBanner';
 
 export type Layout = CallToActionType | ContentType | ImageType | HomeBannerType
@@ -44,6 +45,7 @@ export const Page: CollectionConfig = {
       blocks: [
         CallToAction,
         Content,
+        ContentWithListBadges,
         Image,
         HomeBanner,
       ],

@@ -1,0 +1,5 @@
+.thumbnail--size-expand img,
+.thumbnail--size-expand svg {
+  object-fit: contain;
+  overflow: hidden;
+}

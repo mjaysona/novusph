@@ -53,7 +53,7 @@ export const HomeBanner: Block = {
           name: 'lottie',
           label: 'Select Lottie Animation',
           type: 'relationship',
-          relationTo: 'lotties',
+          relationTo: 'lottie',
           required: true,
           admin: {
             condition: (_: Data, siblings: Data): boolean => (
