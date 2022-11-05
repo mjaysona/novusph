@@ -1,0 +1,27 @@
+@import '../../css/functions.scss';
+@import '../../css/base.scss';
+
+.container {
+  padding: ($base-grid * 2.5) 0;
+  border-top-right-radius: s(20);
+  border-top-left-radius: s(20);
+  position: relative;
+}
+
+.wrapper {
+  padding: 0 s(5);
+  margin: auto;
+  max-width: $max-width;
+}
+
+.gray {
+  background-color: $gray-lightest;
+  &::after {
+    content: '';
+    background-color: $gray-lightest;
+    bottom: -80px;
+    height: ($base-grid * 2.5) ;
+    position: absolute;
+    width: 100%;
+  }
+}

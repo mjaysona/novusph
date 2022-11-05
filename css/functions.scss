@@ -1,0 +1,5 @@
+@import './base.scss';
+
+@function s($multiplier) {
+  @return $multiplier * $base-spacer;
+}

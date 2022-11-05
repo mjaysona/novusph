@@ -1,0 +1,20 @@
+@import '../../../css/functions.scss';
+
+.column-grid {
+  display: grid;
+  > div {
+    margin: s(8) s(8) 0 s(8);
+  }
+}
+
+.grid---1 {
+  grid-template-columns: auto;
+}
+
+.grid---2 {
+  grid-template-columns: auto auto;
+}
+
+.grid---3 {
+  grid-template-columns: auto auto auto;
+}

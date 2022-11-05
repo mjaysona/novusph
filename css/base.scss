@@ -1,3 +1,29 @@
-$spacing: 4px;
-$grid: calc(4px * 8);
+$base-spacer: 4px;
+$base-grid: $base-spacer * 8;
 $font-size: 16px;
+$max-width: $base-grid * 39;
+
+// colors
+$primary-lightest: #89c6f1;
+$primary-lighter: #5cb0eb;
+$primary-light: #2f9ae5;
+$primary: #13639b;
+$primary-dark: #0d466e;
+$primary-darker: #082940;
+$primary-darkest: #020c13;
+
+$secondary-lightest: #89c6f1;
+$secondary-lighter: #5cb0eb;
+$secondary-light: #2f9ae5;
+$secondary: #13639b;
+$secondary-dark: #0d466e;
+$secondary-darker: #082940;
+$secondary-darkest: #020c13;
+
+$gray-lightest: #e7edf1;
+$gray-lighter: #c2c7ca;
+$gray-light:#9da1a4;
+$gray: #787b7d;
+$gray-dark: #535557;
+$gray-darker: #2e2f30;
+$gray-darkest: #09090a;

@@ -1,0 +1,11 @@
+@import '../../../css/functions.scss';
+@import '../../../css/base.scss';
+
+.badge {
+  background: white;
+  display: block;
+  font-size: 1.25rem;
+  padding: s(4);
+  border-radius: s(2);
+  border-left: s(4) solid $secondary-light; 
+}

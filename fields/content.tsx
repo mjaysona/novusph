@@ -11,13 +11,13 @@ const blockBasicContent: Field = {
       required: true,
     },
     {
-      name: 'blockHeaderDescription',
-      label: 'Block Header Description',
+      name: 'description',
+      label: 'Description',
       type: 'textarea',
     },
     {
-      name: 'blockFooterDescription',
-      label: 'Block Footer Description',
+      name: 'footerText',
+      label: 'Footer Text',
       type: 'textarea',
     },
   ],

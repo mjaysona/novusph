@@ -2,15 +2,16 @@ import { CollectionConfig } from 'payload/types';
 
 type Data = Record<string, unknown>;
 
-type Items = {
+interface Items {
   label: string,
   hasDesription: boolean,
   description: {
     description: string,
   }[],
+  id: string,
 }
 
-export type Type = {
+export interface List {
   listName: string,
   items: Items[],
 }

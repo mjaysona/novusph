@@ -1,0 +1,39 @@
+@import './functions.scss';
+@import './base.scss';
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../public/fonts/Raleway-ExtraBold.ttf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../public/fonts/NotoSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../public/fonts/NotoSans-Bold.ttf');
+  font-weight: 700;
+}
+
+html, body {
+  color: $secondary-darkest;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: s(4);
+}

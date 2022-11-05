@@ -1,4 +1,5 @@
 import React from 'react';
+import { NextPage } from 'next';
 import { Layout } from '../../collections/Page';
 import { components } from '../../blocks';
 import classes from './index.module.css';
@@ -8,29 +9,36 @@ type Props = {
   className?: string
 }
 
-const RenderBlocks: React.FC<Props> = ({ layout, className }) => (
-  <div className={[
-    classes.renderBlocks,
-    className,
-  ].filter(Boolean).join(' ')}
-  >
-    {layout.map((block, i) => {
-      const Block: React.FC<any> = components[block.blockType];
+const RenderBlocks: React.FC<Props> = ({ layout, className }) => {
+  console.log(layout);
 
-      if (Block) {
-        return (
-          <section
-            key={i}
-            className={classes.block}
-          >
-            <Block {...block} />
-          </section>
-        );
-      }
+  return (
+    <div className={[
+      classes.renderBlocks,
+      className,
+    ].filter(Boolean).join(' ')}
+    >
+      {layout.map((block, i) => {
+        console.log('block: ', block);
+        
 
-      return null;
-    })}
-  </div>
-);
+        const Block: NextPage = components[block.blockType];
+
+        if (Block) {
+          return (
+            <section
+              key={i}
+              className={classes.block}
+            >
+              <Block {...block} />
+            </section>
+          );
+        }
+
+        return null;
+      })}
+    </div>
+  );
+};
 
 export default RenderBlocks;

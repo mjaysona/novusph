@@ -20,7 +20,20 @@ module.exports = {
     },
   },
   rules: {
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        extendDefaults: true,
+        types: {
+          '{}': false,
+        },
+      },
+    ],
+    'comma-dangle': [2, 'always-multiline'],
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
     'react/no-unused-prop-types': 'off',
@@ -46,6 +59,13 @@ module.exports = {
         line: {
           markers: ['/'],
         },
+      },
+    ],
+    'max-len': [
+      'error',
+      {
+        code: 80,
+        ignoreUrls: true,
       },
     ],
   },
