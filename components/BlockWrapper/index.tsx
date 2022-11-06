@@ -9,12 +9,18 @@ interface Props extends PropsWithChildren<{}> {
 const BlockWrapper: NextPage<Props> = ({
   backgroundColor,
   children,
-}: Props) => (
-  <div className={`${styles.container} ${styles[backgroundColor]}`}>
-    <div className={styles.wrapper}>
-      { children }
+}: Props) => {
+  const setBackground = () => (
+    backgroundColor ? styles[backgroundColor] : ''
+  );
+
+  return (
+    <div className={`${styles.container} ${setBackground()}`}>
+      <div className={styles.wrapper}>
+        { children }
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default BlockWrapper;

@@ -3,7 +3,7 @@
 .column-grid {
   display: grid;
   > div {
-    margin: s(8) s(8) 0 s(8);
+    margin: min(2.2vw ,s(8)) min(2.2vw ,s(8)) 0 min(2.2vw ,s(8));
   }
 }
 
@@ -17,4 +17,16 @@
 
 .grid---3 {
   grid-template-columns: auto auto auto;
+}
+
+@media only screen and (max-width: $md) {
+  .grid---3 {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .grid---3 {
+    grid-template-columns: auto;
+  }
 }

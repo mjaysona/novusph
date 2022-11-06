@@ -4,6 +4,7 @@ import { Image, Type as ImageType } from '../blocks/Image';
 import { CallToAction, Type as CallToActionType } from '../blocks/CallToAction';
 import { Content, Type as ContentType } from '../blocks/Content';
 import { ContentWithListBadgesBlock } from '../blocks/ContentWithListBadges';
+import { ContentWithGenericListBlock } from '../blocks/ContentWithGenericList';
 import { HomeBanner, Type as HomeBannerType } from '../blocks/HomeBanner';
 
 export type Layout = CallToActionType | ContentType | ImageType | HomeBannerType
@@ -45,6 +46,7 @@ export const Page: CollectionConfig = {
       blocks: [
         CallToAction,
         Content,
+        ContentWithGenericListBlock,
         ContentWithListBadgesBlock,
         Image,
         HomeBanner,

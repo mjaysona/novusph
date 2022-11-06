@@ -8,13 +8,13 @@ export interface Props {
   listGroup: ListGroup,
 }
 
-export const ContentWithListBadgesBlock: Block = {
-  slug: 'contentWithListBadges',
+export const ContentWithGenericListBlock: Block = {
+  slug: 'contentWithGenericList',
   labels: {
-    singular: 'Content with list - Badges',
-    plural: 'Content with list - Badges',
+    singular: 'Content with list - Generic',
+    plural: 'Content with list - Generic',
   },
   fields: contentWithList,
 };
 
-export default ContentWithListBadgesBlock;
+export default ContentWithGenericListBlock;

@@ -20,6 +20,7 @@ module.exports = {
     },
   },
   rules: {
+    '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/ban-types': [
       'error',
       {

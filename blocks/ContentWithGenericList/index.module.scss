@@ -1,0 +1,30 @@
+@import '../../css/base.scss';
+@import '../../css/functions.scss';
+
+.wrapper {
+  display: flex;
+  > div {
+    &:first-child {
+      flex: 1;
+      margin-right: min(8.8vw, $base-grid * 4);
+      max-width: $base-grid * 16;
+    }
+    &:last-child {
+      background: $secondary-darker;
+      border-radius: $base-grid;
+      color: white;
+      flex: 1;
+      padding: $base-grid;
+    }
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .wrapper {
+    display: block;
+    > div:first-child {
+      margin-bottom: min(4.8vw, ($base-grid));
+      margin-right: 0;
+    }
+  }
+}

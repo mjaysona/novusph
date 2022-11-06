@@ -1,7 +1,6 @@
 $base-spacer: 4px;
 $base-grid: $base-spacer * 8;
 $font-size: 16px;
-$max-width: $base-grid * 39;
 
 // colors
 $primary-lightest: #89c6f1;
@@ -26,4 +25,11 @@ $gray-light:#9da1a4;
 $gray: #787b7d;
 $gray-dark: #535557;
 $gray-darker: #2e2f30;
-$gray-darkest: #09090a;
+
+// viewport
+$lg: $base-grid * 39;
+$md: $base-grid * 30;
+$sm: $base-grid * 21;
+$xs: $base-grid * 12;
+
+$max-width: $lg;

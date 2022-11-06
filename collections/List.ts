@@ -11,9 +11,12 @@ interface Items {
   id: string,
 }
 
-export interface List {
-  listName: string,
-  items: Items[],
+export interface ListGroup {
+  description?: string,
+  list: {
+    listName: string,
+    items: Items[],
+  }
 }
 
 const List: CollectionConfig = {

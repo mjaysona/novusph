@@ -2,14 +2,15 @@
 @import '../../css/base.scss';
 
 .container {
-  padding: ($base-grid * 2.5) 0;
-  border-top-right-radius: s(20);
-  border-top-left-radius: s(20);
+  background-color: white;
+  padding: min(6.4vw, ($base-grid * 2.5));
+  border-top-right-radius: s(5);
+  border-top-left-radius: s(5);
   position: relative;
 }
 
 .wrapper {
-  padding: 0 s(5);
+  padding: 0 min(1.4vw, s(5));
   margin: auto;
   max-width: $max-width;
 }
@@ -20,7 +21,8 @@
     content: '';
     background-color: $gray-lightest;
     bottom: -80px;
-    height: ($base-grid * 2.5) ;
+    left: 0;
+    height: ($base-grid * 2.5);
     position: absolute;
     width: 100%;
   }

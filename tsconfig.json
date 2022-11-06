@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "target": "es5",
     "lib": [
       "dom",
@@ -19,7 +19,9 @@
     "isolatedModules": true,
     "incremental": true,
     "paths": {
-      "react": [ "./node_modules/@types/react" ]
+      "react": [
+        "./node_modules/@types/react"
+      ]
     }
   },
   "include": [
